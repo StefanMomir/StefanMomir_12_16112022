@@ -6,7 +6,7 @@
 
 ### In the project directory of **BackEnd Api**, you can run:
 
-## `npm start`
+`npm start`
 
 Server will run at port **3001**
 
@@ -16,9 +16,9 @@ Server will run at port **3001**
 
 You must run :
 
-## `npm install`
+`npm install`
 
-for dependencies, in order the client to work !
+for dependencies, in order the server to work !
 
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -32,7 +32,7 @@ for dependencies, in order the client to work !
 
 ### In the project directory of **FrontEnd App**, you can run:
 
-## `npm start`
+`npm start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -42,7 +42,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 You must run :
 
-## `npm install`
+`npm install`
 
 for dependencies, in order the client to work !
 
