@@ -160,10 +160,9 @@ const Profile = () => {
   const userScore = getScoreModeled();
 
   return (
-    <>
-      <MainContent />
-      <div className="middle-content">
-        <div className="people-name">
+    <div className="middle-wrapper">
+      <div className="content">
+        <div className="header">
           <h1>
             Bonjour <span>{fullName}</span>
           </h1>
@@ -171,7 +170,8 @@ const Profile = () => {
             Félicitation ! Vous avez explosé vos objectifs hier 👏
           </p>
         </div>
-        <div className="daily-working">
+
+        <div className="session-container">
           <div className="bar-chart-title">Activité quotidienne</div>
           <div className="bar-chart-content">
             <div className="bar-chart-kg">
@@ -185,6 +185,7 @@ const Profile = () => {
           </div>
           <Activity activity={userActivity} />
         </div>
+
         <div className="bottom-graph">
           <div className="session-time">
             <div className="line-chart-description">
@@ -199,6 +200,7 @@ const Profile = () => {
             <Score score={userScore} />
           </div>
         </div>
+
         <div className="loss-details">
           <div className="calories">
             <p className="nutrient-value">{calo}kCal</p>
@@ -218,7 +220,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -4,10 +4,10 @@ import Main from "../components/Main.jsx";
 
 const Home = () => {
   return (
-    <>
+    <div className="main-wrapper">
       <Container />
       <Main />
-    </>
+    </div>
   );
 };
 
