@@ -10,6 +10,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<Home />} />
+          {/* <---------------------- MODIFICATION AFTER SOUTENANCE () */}
           <Route path="/user" element={<Home />} />
           <Route path="/user/:Id" element={<Profile />} />
         </Routes>

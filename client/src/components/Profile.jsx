@@ -7,7 +7,7 @@ import Score from "../components/RadialCharts.jsx";
 import BulletBlack from "../assets/bullet-black.svg";
 import BulletRed from "../assets/bullet-red.svg";
 import MainContent from "./Container.jsx";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import axios from "axios";
 import { useState } from "react";
 import mockDb from "../data/mockData.js";
@@ -21,6 +21,8 @@ import {
 const Profile = () => {
   // HOOKS
   const { Id } = useParams();
+  const navigate =
+    useNavigate(); /* <---------------------- MODIFICATION AFTER SOUTENANCE () */
   const [data, setData] = useState();
   const [activity, setActivity] = useState();
   const [sessions, setSessions] = useState();
@@ -39,7 +41,11 @@ const Profile = () => {
     const fetchUserData = async () => {
       try {
         /* API DATA */
-        const usersData = await axios.get(`${url}`);
+        const usersData = await axios
+          .get(`${url}`)
+          .catch(() =>
+            navigate("/")
+          ); /* <---------------------- MODIFICATION AFTER SOUTENANCE () */
         const activityData = await axios.get(`${url}/activity`);
         const sessionsData = await axios.get(`${url}/average-sessions`);
         const performanceData = await axios.get(`${url}/performance`);
